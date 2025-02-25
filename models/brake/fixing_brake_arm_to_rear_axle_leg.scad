@@ -9,7 +9,7 @@ module fixing_brake_arm_to_rear_axle_leg() {
     count_washers_each_end = 3;
     h_nut = get_metric_bolt_head_height(SIZE_BOLT_FIXING_BRAKE_ARM_TO_REAR_AXLE_LEG);
     L_bolt = D_AXLE_REAR + 2 * (T_WASHER_BOLT_FIXING_BRAKE_ARM_TO_REAR_AXLE_LEG * count_washers_each_end + h_nut) + L_BOLT_EXTENSION;
-    rotate([0, 0, ANGLE_BRAKE_ROD_MAX]) for (index_side_z = [0 : 1 : 1]) {
+    rotate([0, 0, -ANGLE_BRAKE_ROD_MAX]) for (index_side_z = [0 : 1 : 1]) {
         mirror([0, 0, index_side_z]) translate([0, 0, R_BRAKE_ARM[2] / 2]) {
             // axle washer
             translate([0, 0, 0]) washer(T_WASHER_AXLE_FIXING_BRAKE_ARM_TO_REAR_AXLE_LEG, D_WASHER_AXLE_FIXING_BRAKE_ARM_TO_REAR_AXLE_LEG, D_AXLE_REAR, centre = false);
