@@ -38,13 +38,13 @@ module brake_assembly(angle_brake_rod) {
             
             for (index_side_x = [0:1:1]) {
                 mirror([index_side_x, 0, 0]) {
-                    translate([X_OFFSET_FIXING_BRAKE_ARM_TO_LEAD_PLATE, 0, 0]) rotate([0, 0, -(90 - angle_brake_rod)]) {
+                    translate([X_OFFSET_FIXING_BRAKE_ARM_TO_LEAD_PLATE, 0, 0]) rotate([0, 0, (90 - angle_brake_rod)]) {
                         // brake arm
                         translate([R_BRAKE_ARM[0] / 2, 0, 0]) brake_arm();
                         // fixing brake arm to brake pad
-                        translate([R_BRAKE_ARM[0] - X_OFFSET_FIXING_BRAKE_ARM_TO_BRAKE_PAD_FROM_END, 0, R_BRAKE_ARM[2] / 2]) rotate([0, 0, 90 - ANGLE_BRAKE_ROD_MAX]) fixing_brake_arm_to_brake_pad();
+                        translate([R_BRAKE_ARM[0] - X_OFFSET_FIXING_BRAKE_ARM_TO_BRAKE_PAD_FROM_END, 0, R_BRAKE_ARM[2] / 2]) rotate([0, 0, -(90 - angle_brake_rod)]) fixing_brake_arm_to_brake_pad();
                         // brake pad
-                        translate([R_BRAKE_ARM[0] - X_OFFSET_FIXING_BRAKE_ARM_TO_BRAKE_PAD_FROM_END, 0, R_BRAKE_ARM[2] / 2 + T_FIXING_BRAKE_ARM_TO_BRAKE_PAD + (W_FIXING_BRAKE_ARM_TO_BRAKE_PAD - T_FIXING_BRAKE_ARM_TO_BRAKE_PAD) / 2]) rotate([0, 0, 90 - ANGLE_BRAKE_ROD_MAX]) translate([T_FIXING_BRAKE_ARM_TO_BRAKE_PAD, 0, 0]) brake_pad();
+                        translate([R_BRAKE_ARM[0] - X_OFFSET_FIXING_BRAKE_ARM_TO_BRAKE_PAD_FROM_END, 0, R_BRAKE_ARM[2] / 2 + T_FIXING_BRAKE_ARM_TO_BRAKE_PAD + (W_FIXING_BRAKE_ARM_TO_BRAKE_PAD - T_FIXING_BRAKE_ARM_TO_BRAKE_PAD) / 2]) rotate([0, 0, -(90 - angle_brake_rod)]) translate([T_FIXING_BRAKE_ARM_TO_BRAKE_PAD, 0, 0]) brake_pad();
                     }
                     // fixing brake arm to rear axle leg
                     translate([X_POS_AXLE_LEG_REAR, -y_pos_lead_fixing_ballscrew_to_brake_arms + Y_POS_AXLE_REAR, 0]) fixing_brake_arm_to_rear_axle_leg();
