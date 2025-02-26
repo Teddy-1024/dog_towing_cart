@@ -2,7 +2,7 @@
 Dog Towing Cart 3D design
 
 
-## Design preview
+## Gallery
 Dog Cart Above Shot
 ![Dog Cart Above Shot](./output/dog_cart-above_shot.png)
 
