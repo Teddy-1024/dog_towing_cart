@@ -16,7 +16,7 @@ module tube_clamp_round_tee_long_104(tube_diameter) {
         translate([L_shaft_short / 2, 0, 0]) rotate([0, 90, 0]) cylinder(L_shaft_short, tube_diameter / 2, tube_diameter / 2, center = true);
     }
     // Shopping
-    echo("Round tee long 104: Tube clamp - x1");
+    echo(str("Round tee long 104: Tube clamp Φ", tube_diameter, "mm - x1"));
 }
 
 // test output

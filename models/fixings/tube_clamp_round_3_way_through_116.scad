@@ -19,7 +19,7 @@ module tube_clamp_round_3_way_through_116(tube_diameter) {
         translate([0, L_shaft_long / 2, 0]) rotate([90, 0, 0]) cylinder(L_shaft_long, tube_diameter / 2, tube_diameter / 2, center = true);
     }
     // Shopping
-    echo("Round 3-way through 116: Tube clamp - x1");
+    echo(str("Round 3-way through 116: Tube clamp Φ", tube_diameter, "mm - x1"));
 }
 
 // test output

@@ -21,7 +21,7 @@ module tube_clamp_square_base_plate_132(beam_width) {
         }
     }
     // Shopping
-    echo("Square base plate 132: Tube clamp - x1");
+    echo(str("Square base plate 132: Tube clamp Φ", beam_width, "mm - x1"));
 }
 
 // test output

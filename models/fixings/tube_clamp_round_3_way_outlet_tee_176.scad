@@ -31,7 +31,7 @@ module tube_clamp_round_3_way_outlet_tee_176(tube_diameter) {
         rotate([90, 0, 0]) cylinder(L_shaft_long, tube_diameter / 2, tube_diameter / 2, center = true);
     }
     // Shopping
-    echo("Round 3-way outlet tee 176: Tube clamp - x1");
+    echo(str("Round 3-way outlet tee 176: Tube clamp Φ", tube_diameter, "mm - x1"));
 }
 
 // test output

@@ -21,7 +21,7 @@ module tube_clamp_round_base_plate_132(tube_diameter) {
         }
     }
     // Shopping
-    echo("Round base plate 132: Tube clamp - x1");
+    echo(str("Round base plate 132: Tube clamp Φ", tube_diameter, "mm - x1"));
 }
 
 // test output
